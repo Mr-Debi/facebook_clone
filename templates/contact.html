@@ -30,9 +30,10 @@
         <div class="panel panel-default pull-right">
             <div class="panel-body">
             <h4>Contact Us</h4>
-            <form method="post" action="">
+            <form method="post" action="{% url 'contact' %}">
+              {% csrf_token %}
                 <div class="form-group">
-                    <input class="form-control" type="text" name="status" placeholder="Your Full Name">
+                    <input class="form-control" type="text" name="name" placeholder="Your Full Name">
                 </div>
 
                 <div class="form-group">
@@ -52,10 +53,10 @@
                 </div>
 
                 <!-- uplode pic  -->
-                <div class = "form-group">
-                    <input class="form-control" type="file" name="fileToUplode" ><br>
+                <!-- <div class = "form-group"> -->
+                    <!-- <input class="form-control" type="file" name="fileToUplode" ><br> -->
                     <!-- <input class="btn btn-primary" type="submit" value="Uplode" name="uplode_pic"> -->
-                </div>
+                <!-- </div> -->
                 <!-- /uplode pic  -->
                 <div class="form-group">
                 <input class="btn btn-primary" type="submit" name="update_profile" value="Send">

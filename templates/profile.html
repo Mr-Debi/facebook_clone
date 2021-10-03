@@ -46,6 +46,15 @@
               </div>
             </form>
 
+            <h4>Edit Name</h4>
+            <form method="post" action="{% url 'full_name' %}">
+              {% csrf_token %}
+              {{form}}
+              <div class="form-group">
+                <input class="btn btn-primary" type="submit" name="full_name" value="Uplode">
+              </div>
+            </form>
+
           <!-- <form method= 'post' action=''>
           <label for="image">Uplode Image</label>
           <input type="file" id="image" name = "image">

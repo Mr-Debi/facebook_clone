@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-zlse30u4ieghg25ilxiy&*z0ld61wq6i$h)t9_jg-u+(#vlla8'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False                #(by defa)True --->for seen erron //  False for don't seen error[live host] 
+DEBUG = True                #(by defa)True --->for seen erron //  False for don't seen error[live host] 
 
-ALLOWED_HOSTS = ["*"]          #(b) [] ,,      ,,  // ["*"]   //     ,,  ,,  ,,  ,,
+ALLOWED_HOSTS = []          #(by defa) [] ,,      ,,  // ["*"]   //     ,,  ,,  ,,  ,,
+                    # if  you are a devloper then use "BY DEFAULT VALUE" // if server is LIVE use "True" & "["*"]"
 
 
 # Application definition
@@ -134,3 +135,12 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR,'media')
+
+
+ALLOWED_HOSTS = []
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'lipundebidutta.db@gmail.com'
+EMAIL_HOST_PASSWORD = 'qwerty123LIPUN'
+EMAIL_PORT = 587
+EMAIL_USE_TLS = True
+EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
